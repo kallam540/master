@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Hello World'
+                sh 'mvn clean install'
             }
         }
         stage('Test') {
