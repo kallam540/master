@@ -9,8 +9,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                def mvnHome = tool name: 'clean package', type: 'maven'
-                sh "${mvnHome}/bin.mvn package"
+                sh "${tool name: 'clean package', type: 'maven'}/bin.mvn package"
             }
         }
         stage('Test') {
