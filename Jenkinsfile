@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh "${tool name: 'clean package', type: 'maven'}/bin.mvn package"
+                sh "${tool name: 'clean package', type: 'maven'}/bin/mvn package"
             }
         }
         stage('Test') {
