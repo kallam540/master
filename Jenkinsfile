@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Compile') {
+        stage('Checkout') {
             steps {
-                echo 'Hello World'
+                git branch: 'development', url: 'https://github.com/kallam540/master.git'
             }
         }
         stage('Build') {
